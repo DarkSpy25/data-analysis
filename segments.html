@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="segments.html">Popular Specifications and Data Segments</a>
+        <a href="other.html"> Other queries</a>
+    </div>
+
+    <div class="main">
+        <div class="heading">
+            <h1>Segments</h1>
+        </div>
+        <h2>Analysis of SIAM segments</h2>
+        <p>As per SIAM (Society of Indian Automobile Manufacturers)
+            classification of segment is done on the basis of the length and body type of the vehicle. These
+            details are taken from Team-BHP.
+        </p>
+        <ul>
+            <li><b>A Segment - </b>Small/mini hatchbacks. Ex
+                - Renault Kwid, Maruti S-Presso/Alto 800</li>
+            <li><b>B1 Segment - </b>Regular hatchbacks. eg. Maruti Swift/WagonR, Hyundai Grand i10 Nios,
+                Tata
+                Tiago etc.
+            </li>
+            <li><b>B2 Segment -</b> Premium hatchbacks and compact SUVs. eg. Hyundai i20, Maruti Baleno, etc.
+            </li>
+            <li><b>C1 Segment -</b> Entry level sedans and larger SUVs. eg. KIA Sonet, Hyundai Venue,
+                Tata
+                Nexon, etc.</li>
+            <li><b>C2 Segment - </b>Proper sedans and also includes the bigger/premium SUVs. eg. Honda
+                City,
+                Maruti Ciaz, Skoda Slavia/Kushaq, etc.
+
+            </li>
+            <li><b>D1 Segment -</b> Larger and more powerful sedans and the larger SUVs. eg. Skoda
+                Octavia,
+                Honda Civic,Jeep Compass, etc.</li>
+            <li><b>D2 Segment - </b>Premium sedans and SUVs
+                eg. Honda Accord, Toyota Camry/Fortuner, Ford Endeavor
+            </li>
+            <li><b>Premium -</b> Luxury brands and their Sedans and SUVs. eg.s Audi, Lexus, BMW, Porsche, Jaguar etc.
+            </li>
+            <li><b>Utility - </b>Big rugged 4X4's. eg. Mahindra Thar, Force Gurkha,
+                Toyota Hilux, Isuzu D-Max etc.
+            </li>
+        </ul>
+        <p>Using ANOVA, we can see that the segments as classified by SIAM vary significantly from one another.
+        </p>
+        <br>
+        <img src="ANOVA.png" alt="ANOVA">
+        <h2>Segmentation as per K-means Clustering</h2>
+        <p>Divided the dataset into 7 clusters using the K-means algorithm in unsupervised learning. This was done using
+            the BigML extension in Google Sheets.
+        </p>
+        <ul>
+            <li>Removed premium and utility cars while clustering because there are a wide range of cars in those
+                segments. The clustering wasn't very effective due to this.</li>
+            <li>Considered showroon price, displacement and volume for clustering as they produced the most accurate
+                clusters. </li>
+        </ul><br>
+        <h2>Comparison of SIAM segments with K-means Clustering</h2>
+        <p>The <b>K-means clustering</b> algorithm provided better results while grouping cars which have models spread
+            across a wide price range. For example the <b>Tata Nexon</b> has models from 7 lakh to 12 lakh. In the SIAM
+            categorization all these cars come under the C1 segment.
+        </p>
+        <p>But in the K-means clustering they are divided into 2 segments. Thus, it is a more accurate representation of
+            the dataset.</p>
+        <br>
+        <iframe width="715" height="371" seamless frameborder="0" scrolling="no"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-DFxzW7OHIUOzHcR1-qEXJPOMdRWJETUFrb9WcRdKo1S6b6_qf7qz5zdiR-29gDvjLUNXb-4X5eLi/pubchart?oid=1100257143&amp;format=interactive"></iframe><br><br>
+        <h2>Charts</h2>
+        <p>The following charts provide a comparative study of SIAM and K-means clustering</p>
+        <ol>
+            <li><a href="general.html">General</a></li><br>
+            <li><a href="performance.html">Performance</a></li><br>
+            <li><a href="safety.html">Safety</a></li><br>
+            <li><a href="infotainment.html">Infotainment</a></li><br>
+            <li><a href="luxury.html">Luxury</a></li><br>
+        </ol>
+    </div>
+
+
+</body>
+
+</html>
